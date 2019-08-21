@@ -43,7 +43,7 @@ if (( $Option == 1 ))
 then
   # Run quality control of the original fastq using FastQC
   /opt/FastQC/fastqc -o $Ouput_Dir/ -t 10 $Input_Dir/${FastqID}_R1_001.fastq.gz $Input_Dir/${FastqID}_R2_001.fastq.gz
-else if (( $Option == 2 ))
+elif (( $Option == 2 ))
 then
   #Quality Control del trimmed fastq
   /opt/FastQC/fastqc -o $Output_Dir/ -t 10 $Input_Dir/${FastqID}_1_trimmed.fastq $Input_Dir/${FastqID}_2_trimmed.fastq
