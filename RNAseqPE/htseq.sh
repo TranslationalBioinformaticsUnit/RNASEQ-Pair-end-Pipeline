@@ -49,10 +49,10 @@ date >&2
 if (( $Option == 1 )) 
 then
   /opt/python/bin/htseq-count -i gene_id --mode=intersection-nonempty --nonunique=none --format=bam $Input_Dir/${FastqID}/accepted_hits.bam $Reference_Dir/Mus_musculus38.gtf > $Output_Dir/${FastqID}_nonempty_count_table.txt
-else if (( $Option == 2 )) 
+elif (( $Option == 2 )) 
 then
   /opt/python/bin/htseq-count -i gene_id --mode=union --nonunique=none --format=bam $Input_Dir/${FastqID}/accepted_hits.bam $Reference_Dir/Mus_musculus38.gtf > $Output_Dir/${FastqID}_nonempty_count_table.txt
-else if (( $Option == 3 )) 
+elif (( $Option == 3 )) 
 then
   /opt/python/bin/htseq-count -i gene_id --mode=intersection-strict --nonunique=none --format=bam $Input_Dir/${FastqID}/accepted_hits.bam $Reference_Dir/Mus_musculus38.gtf > $Output_Dir/${FastqID}_nonempty_count_table.txt
 fi
